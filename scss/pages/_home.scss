@@ -263,7 +263,7 @@
         width: 100%;
         position: relative;
         height: 40vw;
-        background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../../photos/IMG-20190606-WA0009.jpg);
+        background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../photos/IMG-20190606-WA0009.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
@@ -392,7 +392,7 @@
         &__bg {
             position: relative;
             grid-column: 1/-1;
-            background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../../img/chona.jpg);
+            background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../img/chona.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             @include afterLine;
@@ -618,7 +618,7 @@
     &__bg-4 {
         height: 100%;
         position: relative;
-        background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../../img/football3.jpg);
+        background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../img/football3.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
@@ -628,7 +628,7 @@
     &__bg-2 {
         grid-column: 1/-1;
         grid-row: 1/2;
-        background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../../img/football2.jpg);
+        background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7)), url(../img/football2.jpg);
 
     }
 
@@ -820,7 +820,7 @@
         padding: 0 1rem;
         border: 1px solid red;
         position: relative;
-        overflow:hidden;
+        overflow: hidden;
         width: 100%;
 
         & video {
@@ -829,6 +829,7 @@
             height: 35vw;
 
         }
+
         & p {
             color: White;
             display: block;
@@ -836,13 +837,14 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            padding:2rem;
-        background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7));
+            padding: 2rem;
+            background-image: linear-gradient(to bottom, transparent 20%, rgba($colorDark, .7));
         }
-        & i{
+
+        & i {
             color: red;
             display: block;
-            font-size:5rem;
+            font-size: 5rem;
             position: absolute;
             top: 3rem;
             left: 3rem;
@@ -982,4 +984,3 @@
         }
     }
 }
-
