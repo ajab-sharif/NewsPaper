@@ -1,0 +1,153 @@
+.header {
+    &__time{
+        margin-top: -2rem;
+    }
+    &__content-box {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr min-content 1fr;
+    }
+
+    &__logo-box {
+        position: relative;
+    }
+
+    &__logo {
+        position: relative;
+        top: 1rem;
+        left: 4.3rem;
+        max-width: 13.5rem;
+        height: auto;
+        display: block;
+    }
+
+    &__text-logo {
+        position: relative;
+        top: -2rem;
+        left: 0;
+        font-size: 6rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        font-family: $font-Zen;
+
+        &-1 {
+            font-size: 3rem;
+        }
+    }
+
+    &__left {
+        display: grid;
+        grid-column-gap: 2rem;
+        align-items: center;
+        grid-template-columns: min-content  1fr;
+    }
+    &__search{
+        display: block;
+        font-size: 2.8rem;
+        height: 2.5rem;
+    }
+
+    /// this is for navigaton icon start
+    &__checkbox {
+        display: none;
+        opacity: 0;
+    }
+
+    &__label {
+        background-color: rgba(0, 0, 0, 0);
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    &__toggle {
+        width: 2.5rem;
+        height: 4px;
+        background-color: #000;
+        display: block;
+        position: relative;
+        transition: background .2s ease;
+
+        &::after,
+        &::before {
+            display: block;
+            position: absolute;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: currentColor;
+            transition: transform 1s ease;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            bottom: -.8rem;
+        }
+
+        &:hover::after {
+            bottom: -.9rem;
+        }
+
+        &:hover::before {
+            top: -.9rem;
+        }
+    }
+
+    &__checkbox:checked+&__label &__toggle:after {
+        transform: rotate(-135deg);
+        bottom: 0;
+        background:$colorLight;
+    }
+
+    &__checkbox:checked+&__label &__toggle {
+        background: transparent;
+    }
+    &__checkbox:checked+&__label {
+        background: $colorDark;
+        transition: all .3s ease;
+    }
+    &__checkbox:checked+&__label &__toggle::before {
+        top: 0;
+        transform: rotate(135deg);
+        background:$colorLight;
+
+
+    }
+
+    /// this is for navigaton icon end
+    &__notification{
+        display: block;
+        font-size:2rem;
+        text-align-last: right;
+    }
+    &__version-value{
+        margin-left: 4px;
+        align-self: center;
+        text-transform: capitalize;
+    }
+    &__right {
+        justify-self: end;
+        display: grid;
+        grid-row-gap: 2rem;
+        align-items: center;
+        align-content: center;
+        grid-template-rows:min-content min-content;
+        &-content{
+          display: flex;
+          margin-bottom: -4rem;
+        }
+    }
+
+}
+
+.img {
+    width: 100vw;
+}

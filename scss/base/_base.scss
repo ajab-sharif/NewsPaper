@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: 'Tajawal', sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin:0 auto;
+    &__border{
+        padding: 1rem 0;
+        border-top: 1px solid $color-3;
+        border-bottom: 1px solid $color-3;
+    }
+}
+span{
+    text-transform: uppercase;
+}
+.png{
+    width: 100vw;
+}
+.s1,
+.s2,
+.s3{
+    height:50vw;
+}

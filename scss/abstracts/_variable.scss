@@ -1,0 +1,29 @@
+// COLOR 
+
+$color-1: #2e3233; // grey dark
+$color-2: #69aa6f; // green
+$color-3: #e1e2e0; // grey light 
+$color-4: #ffffff; // white
+
+
+
+$colorPrimary:#e6b14e;
+$colorDark:rgb(0, 0, 0);
+$colorGrayDark:rgba(133, 133, 138, 0.925);
+$colorGrayLight:#dbd8d8;
+$colorLight:rgb(255, 255, 255);
+$colorLightDark:rgb(45, 45, 49);
+$colorGreenLight:rgb(0, 245, 20);
+$colorOrange:orangered;
+$colorYellow:rgb(255, 187, 0);
+$line:$colorGrayLight;
+
+// custom grid
+$grid-width: 130rem; // 1000px
+$gutter-vertical: 4rem; //40px
+$gutter-horizontal: 4rem; // 40px
+
+// font 
+$font-Assistant: 'Assistant', sans-serif;
+$font-Crimson:'Crimson Text', serif;
+$font-Zen: 'Zen Tokyo Zoo', cursive;

@@ -1,0 +1,158 @@
+.footer {
+    &__content {
+
+        &>p {
+            padding: 2rem;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        & .logo {
+            padding: 1rem 0;
+            width: 100%;
+            display: flex;
+
+            & img {
+                display: block;
+                height: 2.5rem;
+                width: 2.5rem;
+                margin-right: .3rem;
+            }
+
+            & p {
+                height: 2.5rem;
+                font-size: 2.3rem;
+            }
+        }
+
+    }
+
+    &__menu--content {
+        position: relative;
+        @include afterLine;
+
+        &:after {
+            height: 1px;
+            width: 100%;
+            top: 100%;
+            left: 0;
+        }
+
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: 30rem 1fr 30rem;
+    }
+
+    &__menu--link,
+    &__menu--link-2 {
+        position: relative;
+        @include afterLine;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-auto-flow: column;
+
+        & a {
+            display: block;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+    }
+
+    &__menu--link-2 {
+        grid-template-columns: repeat(2, 1fr);
+
+        &::after {
+            background: transparent;
+        }
+    }
+
+    &__menu--version {
+        position: relative;
+        @include afterLine;
+
+        & span {
+            font-weight: 600;
+            font-size: 1.8rem;
+            display: block;
+
+        }
+    }
+
+    &__defult {
+        padding: .5rem 0;
+
+        & li {
+            list-style: none;
+        }
+
+        & li input {
+            display: none;
+        }
+
+        & li label {
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: '';
+                margin-right: .7rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                display: inline-block;
+                border: 1px solid currentColor;
+            }
+        }
+    }
+
+    &__defult li>input:checked+label::before {
+        border-width: 4px;
+    }
+
+    &__icons {
+        position: relative;
+        @include afterLine;
+
+        &:after {
+            width: 100%;
+            height: 1px;
+            top: 100%;
+        }
+
+        padding: .5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__icon {
+        & p {
+            text-transform: capitalize;
+            width: 100%;
+            text-align: center;
+            margin-bottom: .5rem;
+        }
+
+        & i {
+            display: inline-block;
+            margin: 0 3px;
+            font-size: 2rem;
+        }
+    }
+
+    &__download {
+        & P {
+            text-transform: capitalize;
+            text-align: center;
+            margin-bottom: .5rem;
+        }
+
+        & img {
+            width: 10rem;
+        }
+    }
+}

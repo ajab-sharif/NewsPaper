@@ -1,0 +1,120 @@
+.heading {
+    &--light {
+        color: $colorGrayLight !important;
+    }
+
+    &--after {
+        @include afterLineBold;
+
+        &-2 {
+            @include afterLineBold;
+            &:after {
+                background: rgb(14, 152, 206);
+                width: 4rem;
+            }
+        }
+    }
+
+    &--lg {
+        font-size: 7rem;
+    }
+}
+
+.time {
+    text-transform: capitalize;
+    color: $colorGrayDark;
+    margin: 1rem 0;
+    font-family: $font-Crimson;
+    font-size: 1.4rem;
+}
+
+.defult-text {
+    text-transform: capitalize;
+    color: $colorGrayDark;
+    font-size: inherit;
+
+    &--orange {
+        color: orangered;
+    }
+
+    &--light {
+        color: $colorGrayLight;
+    }
+}
+
+
+%heading {
+    position: relative;
+    line-height: 1;
+    font-family: $font-Crimson;
+    font-weight: 700;
+    color: $color-1;
+    &--light{
+        color:$colorLight;
+    }
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 3.5rem;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 2.5rem;
+
+
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 2.2rem;
+}
+
+.heading-5 {
+    @extend %heading;
+    font-size: 2rem;
+}
+
+.heading-6 {
+    @extend %heading;
+    font-size: 1.9rem;
+    text-transform: capitalize;
+}
+
+.heading__inline--block {
+    margin-top: 4rem;
+    width: 71%;
+    &>span {
+        display: inline-block;
+        background:$colorLightDark;
+        margin-bottom: 1rem;
+        margin-left: -4rem;
+    }
+}
+
+
+.ads {
+    padding:1rem 0;
+
+    &__img {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.corona-box {
+    width: 90%;
+    padding: .5rem;
+    border: 1px solid orangered;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-row-gap: .3rem;
+    justify-items: center;
+    justify-self: center;
+}
+
+section {
+    padding-bottom: 1rem;
+}
