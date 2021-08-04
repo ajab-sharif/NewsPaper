@@ -42,7 +42,8 @@ html {
 
 body {
   font-size: 1.4rem;
-  font-family: 'Tajawal', sans-serif; }
+  font-family: 'Tajawal', sans-serif;
+  overflow-x: hidden !important; }
   @media only screen and (max-width: 63.75em) {
     body {
       font-size: 1.6rem; } }
