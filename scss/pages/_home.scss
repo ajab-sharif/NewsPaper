@@ -18,6 +18,10 @@
         left: -1%;
     }
 
+    @include respond(lg) {
+        grid-template-columns: 1fr;
+    }
+
     &__left-cta {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -28,14 +32,19 @@
         &:after {
             width: 98%;
             height: 1px;
-            top: 90%;
+            top: 95%;
             left: -1%;
         }
 
         &:last-of-type {
             &::after {
                 background: transparent;
+
+                @include respond(lg) {
+                    background-color: $colorGrayLight;
+                }
             }
+
         }
     }
 
@@ -43,11 +52,23 @@
         position: relative;
         @include afterLine;
 
+        @include respond(lg) {
+            &::after {
+                background: transparent;
+            }
+        }
+
         &-img {
             display: block;
             margin: 0 auto;
             margin-bottom: 5px;
             width: 100%;
+
+            @include respond(lg) {
+                margin-bottom: 1rem;
+                width: 100%;
+                height: 15vw;
+            }
 
             &-text {
                 margin-left: 1rem;
@@ -73,11 +94,9 @@
         position: relative;
         @include afterLine;
         padding: 1rem;
-        top: 1%;
 
         &-img {
             width: 95%;
-
         }
 
     }
@@ -86,6 +105,10 @@
     &__content-3 {
         &::after {
             background: transparent;
+
+            @include respond(lg) {
+                background-color: $colorGrayLight;
+            }
         }
 
         &-img {
@@ -93,11 +116,25 @@
         }
     }
 
+    &__content-1 {
+        &::after {
+            background: transparent;
+
+        }
+    }
+
+    &__content-3 {
+        @include respond(lg) {
+            &::after {
+                background: transparent;
+            }
+        }
+    }
+
     &__right {
         padding: 0 2rem;
     }
 
-    &__content-r {}
 
     &__content-r1,
     &__content-r2 {
@@ -111,15 +148,60 @@
         }
     }
 
-    &__content-r2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: min-content;
+    &__content-r {
+        @include respond(lg) {
+            grid-gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__content-r1 {
+        @include respond(lg) {
+            position: relative;
+            @include afterLine;
+            padding: 1rem;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
         &-img {
             width: 96%;
             display: block;
             grid-column: 1/2;
+
+            @include respond(lg) {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__content-r2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content;
+
+        @include respond(lg) {
+            position: relative;
+            @include afterLine;
+
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-img {
+            width: 96%;
+            display: block;
+            grid-column: 1/2;
+
+            @include respond(lg) {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -131,11 +213,23 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content;
 
+        @include respond(lg) {
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+            margin-bottom: 1rem;
+
+            & h4 {
+                grid-row: 2/3;
+            }
+        }
+
         &-img {
-            align-self: end;
             width: 96%;
             display: block;
-            grid-column: 2/3;
+            grid-column: 1/2;
+            margin: auto;
+
+
         }
     }
 
@@ -192,16 +286,38 @@
         left: 1%;
     }
 
+    @include respond(md) {
+        grid-template-columns: 1fr;
+
+    }
+
     &__img-box {
         position: relative;
         padding: 0 1rem;
         @include afterLine;
+
+        @include respond(md) {
+            padding: 1rem 0;
+
+            &:after {
+                width: 100%;
+                height: 1px;
+                top: 99%;
+                left: 0;
+            }
+        }
     }
 
     &__img {
         width: 100%;
         display: block;
         height: 30vw;
+
+        @include respond(md) {
+            height: 40vw;
+            margin-bottom: 2rem;
+
+        }
     }
 
     &__content {
@@ -323,6 +439,10 @@
         display: grid;
         grid-column-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+        @include respond(md) {
+            grid-template-columns: 35% 1fr;
+        }
     }
 
     &__content--title {
@@ -422,11 +542,40 @@
 
 
 
+
+    &__content--subject__content {
+        @include respond(md) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+            grid-gap: 1rem;
+        }
+    }
+
     &__content--subject {
+
+        @include respond(md) {
+            @include afterLine;
+
+            &:after {
+                height: 1px;
+                width: 100%;
+                top: 0;
+            }
+
+            position: relative;
+            padding-top:2rem;
+            grid-column: 1/-1;
+        }
+
         &__box {
             display: grid;
             grid-template-columns: 40% 1fr;
             margin-bottom: 2rem;
+
+            @include respond(md) {
+                grid-template-columns: 1fr;
+
+            }
         }
 
         &__img-ads {
@@ -434,15 +583,34 @@
             width: 98%;
             display: block;
             margin: 0 auto;
+
+            @include respond(md) {
+                height: 100%;
+            }
         }
 
         &__img {
             width: 95%;
             display: block;
+
+            @include respond(md) {
+                width: 100%;
+            }
         }
 
         &__details {
             padding: .5rem;
+
+            @include respond(md) {
+                position: relative;
+                @include afterLine;
+
+                &:after {
+                    height: 1px;
+                    width: 100%;
+                    top: 100%;
+                }
+            }
         }
     }
 
@@ -461,6 +629,10 @@
         display: grid;
         grid-column-gap: 2rem;
         grid-template-columns: minmax(45rem, 40%) minmax(50rem, 1fr);
+
+        @include respond(md) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__content--text {
@@ -559,10 +731,19 @@
         grid-column-gap: 2rem;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+        @include respond(md) {
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        }
     }
 
     &__content {
         display: grid;
+
+        @include respond(md) {
+            padding: 2rem 0;
+
+        }
 
         &--list {
             list-style-type: none;
@@ -602,7 +783,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-template-rows: 50vw;
-    grid-auto-rows: 50vw;
+    grid-auto-rows: 100vw;
 
     &__right {
         display: grid;
@@ -686,6 +867,11 @@
     &__content-box {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+        @include respond(md) {
+            grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+
+        }
     }
 
     &__content--img {
@@ -707,7 +893,14 @@
         }
     }
 
-    &__content--4 {}
+    &__content--2 {
+        @include respond(md) {
+            &::after {
+                background: transparent;
+
+            }
+        }
+    }
 
 }
 
@@ -727,6 +920,11 @@
     &__content {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+        @include respond(md) {
+            grid-row-gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+        }
     }
 
     &__left,
@@ -741,10 +939,29 @@
         @include afterLine;
     }
 
+    &__middle {
+        @include respond(md) {
+            &::after {
+                background: transparent;
+            }
+        }
+    }
+
+    &__right {
+        @include respond(md) {
+            grid-column: 1/-1;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-rows: max-content min-content;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        }
+    }
+
     &__left-img,
     &__right-img {
         width: 100%;
         height: 100%;
+
     }
 
     &__left-content,
@@ -767,6 +984,19 @@
         &:last-of-type {
             &:after {
                 background: transparent;
+            }
+        }
+    }
+
+    &__right-content {
+        @include respond(md) {
+            grid-gap: 1rem;
+            padding: 1rem 0;
+            grid-template-columns: 1fr;
+            grid-template-rows:30rem;
+
+            &:after {
+                top: 100%;
             }
         }
     }

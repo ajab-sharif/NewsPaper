@@ -1,3 +1,46 @@
+// responsive management 
+/* 
+
+$breakpoint call manager
+X-small -- xsm--
+Small -- sm -- 
+Medium -- md -- 920(57.5em);
+large -- lg -- 1020px(63.75em);
+Extra large -xl- 1250px(78.125em);
+deflult  -- --- -- 1800px;
+Extra extra large -xxl- 1800px(112.5em);
+
+
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint==xxl {
+        @media only screen and (min-width:112.5em) {
+            //Extra extra large -xxl- 1800px(112.5em);
+            @content;
+        }
+    }
+
+    @else if $breakpoint==xl {
+        @media only screen and (max-width:78.125em) {
+            @content;
+
+        }
+    }
+    @else if $breakpoint==lg{
+        @media only screen and (max-width:63.75em) {
+            @content;
+
+        }
+    }
+    @else if $breakpoint==md{
+        @media only screen and (max-width:57.5em) {
+            @content;
+
+        }
+    }
+
+}
+
 @mixin afterLine {
     &::after {
         position: absolute;

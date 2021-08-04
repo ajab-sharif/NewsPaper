@@ -2,6 +2,10 @@
     padding: 1rem 0;
     position: relative;
 
+    @include respond(md) {
+        padding: 0;
+    }
+
     &::after {
         position: absolute;
         bottom: 0;
@@ -11,6 +15,11 @@
         height: 2px;
         background: $color-3;
         display: block;
+
+        @include respond(md) {
+            background: transparent;
+        }
+
     }
 
     &::before {
@@ -22,17 +31,24 @@
         height: 1px;
         background: $color-3;
         display: block;
+
     }
 
     &__nav {
         display: grid;
         justify-content: center;
         align-content: center;
+
+        @include respond(md) {
+            display: none;
+            opacity: 0;
+        }
     }
 
     &__list {
         display: flex;
         list-style: none;
+
     }
 
     &__link {

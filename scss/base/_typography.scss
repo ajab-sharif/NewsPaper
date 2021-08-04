@@ -84,7 +84,7 @@
 
 .heading__inline--block {
     margin-top: 4rem;
-    width: 71%;
+   max-width: 260px;
     &>span {
         display: inline-block;
         background:$colorLightDark;
